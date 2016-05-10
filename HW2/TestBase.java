@@ -36,9 +36,17 @@ public class TestBasr {
     }
 
     public void signIn(AuthorizationCred.entials credentials) {
-        click("link=Авторизация");
+        goToAuth();
         type("name=USER_LOGIN", credentials.login);
         type("name=USER_PASSWORD", credentials.password);
+        signIn();
+    }
+
+    public void goToAuth() {
+        click("link=Авторизация");   
+    }
+
+    public void signIn() {
         click("name=Login");
     }
 
