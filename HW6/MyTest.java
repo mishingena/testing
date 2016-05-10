@@ -41,12 +41,6 @@ public class MyTest extends AuthBase {
         return fromXml(file, elements);
     }
     
-    @Test(dataProvider = "searchFormFromXml")
-    public void searchProduct(String value) {
-        app.searchHelper.search(value);
-    }
-    
-    
     @Test(dataProvider = "namesFromXml")
     public void addAddress(String value) {
         app.navigationHelper.goToAccountPage();
