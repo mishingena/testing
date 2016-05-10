@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Constant>
+    <BaseUrl>http://www.iguides.ru/</BaseUrl>
+    <Login>username</Login>
+    <Password>password</Password>
+</Constant>
