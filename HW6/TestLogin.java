@@ -12,4 +12,11 @@ public class TestLogin extends TestBase {
 
         Assert.assertEquals(app.loginHelper.isLoggedIn(account), true);
     }
+
+    @Test
+    public void logout() throws Exception {
+        app.loginHelper.logout();
+
+        Assert.assertEquals(app.loginHelper.isLoggedIn(), false);
+    }
 }

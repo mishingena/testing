@@ -51,4 +51,29 @@ public class MyTest extends AuthBase {
         
         app.loginHelper.logout();
     }
+
+    @Test
+    public void accountPage() {
+        AccountData account = new AccountData("username", "password");
+
+        app.loginHelper.logout();
+        app.loginHelper.login(account);
+
+        app.navigationHelper.goToAccountPage();
+
+        app.loginHelper.logout();
+    }
+
+    @Test
+    public void profileUsername() {
+        AccountData account = new AccountData("username", "password");
+        app.loginHelper.logout();
+        app.loginHelper.login(account);
+        String username = app.loginHelper.getUserName();
+
+        Assert.assertEquals(username, "username");
+
+        app.loginHelper.logout();
+    }
+
 }
