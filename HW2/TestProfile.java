@@ -16,16 +16,4 @@ public class TestProfile extends TestBase {
 		
 		signOut();
 	}
-
-	public void openProfile() {
-		click("link=Профиль");
-	}
-
-	public void openEditorialMaterials() {
-		click("css=div.link.right > a");
-		waitForLoadPage("30000");
-        click("link=Мои подписки");
-        waitForPageToLoad("30000");
-	}
-
 }
