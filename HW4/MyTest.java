@@ -10,5 +10,7 @@ public class MyTest extends TestBase {
         AddressData address = new AddressData("Name", "Surname", "Tatarstan", "Kazan city", "Univercity street", "242-56-23");
         app.addressHelper.addAddress(address);
         app.loginHelper.logout();
+
+        Assert.assertEquals(app.loginHelper.isLoggedIn(), false);
     }
 }
